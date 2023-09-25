@@ -1,0 +1,34 @@
+# Define a class called Student to represent a student object
+class Student:
+    # Initialize the attributes for name, roll_number, and cgpa
+    def __init__(self, name, roll_number, cgpa):
+        self.name = name
+        self.roll_number = roll_number
+        self.cgpa = cgpa
+
+    # Define a method to print the student details
+    def __str__(self):
+        return f"{self.name} ({self.roll_number}) has CGPA {self.cgpa}"
+
+# Create some sample student objects with different cgpa values
+student1 = Student("Riya", "19CS001", 9.5)
+student2 = Student("Raj", "19CS002", 8.7)
+student3 = Student("Priya", "19CS003", 9.2)
+student4 = Student("Ravi", "19CS004", 7.8)
+student5 = Student("Rohan", "19CS005", 8.9)
+
+# Create a list of student objects
+students = [student1, student2, student3, student4, student5]
+
+# Print the original list of students
+print("Original list of students:")
+for student in students:
+    print(student)
+
+# Call the sort_students function and store the result in a new list
+sorted_students = sort_students(students)
+
+# Print the sorted list of students
+print("Sorted list of students by CGPA:")
+for student in sorted_students:
+    print(student)
